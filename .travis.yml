@@ -11,13 +11,6 @@ before_install:
   - export GRADLE_HOME=$PWD/gradle-5.6.2
   - export PATH=$GRADLE_HOME/bin:$PATH
   - gradle -v
-  - curl -s "https://get.sdkman.io" | bash
-  - source "$HOME/.sdkman/bin/sdkman-init.sh"
-  - sdk version
-  - sdk install java 11.0.4-zulu
-  - sdk use java 11.0.4-zulu
 script:
-  - mvn clean install -DskipTests
-  - cd itf-chartizate-android
   - touch local.properties
-  - gradle clean build
+  - gradle clean build test
