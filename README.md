@@ -47,6 +47,9 @@ gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg
 ./gradlew assemble -x signArchives uploadArchives
 ```
 
+```text
+./gradlew bintrayUpload
+```
 ## gradle.properties
 
 ```text
