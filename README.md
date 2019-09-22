@@ -2,6 +2,7 @@
 
 [![Maven Central](https://img.shields.io/maven-central/v/org.jesperancinha.itf/itf-chartizate-android)](https://search.maven.org/search?q=a:itf-chartizate-android) 
 [![Download](https://api.bintray.com/packages/jesperancinha/maven/itf-chartizate-android/images/download.svg)](https://bintray.com/jesperancinha/maven/itf-chartizate-android/_latestVersion)
+[![GitHub release](https://img.shields.io/github/release-pre/JEsperancinhaOrg/itf-chartizate-android.svg)](https://github.com/JEsperancinhaOrg/itf-chartizate/releases)
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/30fb9978d67c4abf92d9d426c7e60e55)](https://www.codacy.com/manual/jofisaes/itf-chartizate-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JEsperancinhaOrg/itf-chartizate-android&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android.svg?style=svg)](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android)
@@ -13,11 +14,13 @@
 ## Description
 
 ITF library for android
+
 ## Gradle
 
 ```text
 implementation 'org.jesperancinha.itf:itf-chartizate-android:5.0.0'
 ```
+
 ## Maven
 
 ```xml
