@@ -27,7 +27,7 @@ implementation 'org.jesperancinha.itf:itf-chartizate-android:5.0.0'
 <dependency>
   <groupId>org.jesperancinha.itf</groupId>
   <artifactId>itf-chartizate-android</artifactId>
-  <version>5.0.0</version>
+  <version>6.0.0</version>
 </dependency>
 ```
 
