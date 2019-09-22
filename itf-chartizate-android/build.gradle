@@ -54,8 +54,8 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
 }
-def siteUrl = 'https://github.com/jesperancinha/itf-chartizate-modules'
-def gitUrl = 'scm:git:https://github.com/jesperancinha/itf-chartizate-modules.git'
+def siteUrl = 'https://github.com/JEsperancinhaOrg/itf-chartizate-android'
+def gitUrl = 'scm:git:https://github.com/JEsperancinhaOrg/itf-chartizate-android.git'
 
 group = "org.jesperancinha.itf"
 version = "6.0.0"
