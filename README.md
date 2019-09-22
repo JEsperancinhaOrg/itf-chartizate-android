@@ -5,6 +5,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/30fb9978d67c4abf92d9d426c7e60e55)](https://www.codacy.com/manual/jofisaes/itf-chartizate-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JEsperancinhaOrg/itf-chartizate-android&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android.svg?style=svg)](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android)
+[![Build Status](https://travis-ci.org/JEsperancinhaOrg/itf-chartizate-android.svg?branch=master)](https://travis-ci.org/JEsperancinhaOrg/itf-chartizate-android)
 
 ## Description
 
