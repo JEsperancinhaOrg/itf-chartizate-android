@@ -31,10 +31,9 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: wget http://services.gradle.org/distributions/gradle-5.6.2-bin.zip
-      - run: unzip -qq gradle-5.6.2-bin.zip
-      - run: export GRADLE_HOME=$PWD/gradle-5.6.2
-      - run: export PATH=$GRADLE_HOME/bin:$PATH
+      - run: curl -s "https://get.sdkman.io" | bash
+      - run: source "$HOME/.sdkman/bin/sdkman-init.sh"
+      - run: sdk install gradle
       - run: gradle dependencies
 
       - save_cache:
