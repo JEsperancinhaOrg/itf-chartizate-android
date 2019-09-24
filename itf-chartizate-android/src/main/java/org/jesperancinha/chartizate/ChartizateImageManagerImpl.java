@@ -12,24 +12,26 @@ import org.jesperancinha.chartizate.objects.ChartizateCharacterImg;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.InputStream;
+import java.util.logging.Logger;
 
 public class ChartizateImageManagerImpl
         extends ChartizateImageManagerAbstract<Integer, Typeface, Bitmap> {
 
+    private static Logger logger = Logger.getGlobal();
     private final Bitmap targetBitmap;
     private final Canvas canvas;
     private final Paint paint;
     private final String outputFile;
-    private Bitmap bitmap;
 
     public ChartizateImageManagerImpl(final InputStream inputStream, String outputFile) {
         final BitmapFactory.Options options = new BitmapFactory.Options();
         options.inPreferredConfig = Bitmap.Config.ALPHA_8;
+        Bitmap bitmap;
         try {
             bitmap = BitmapFactory.decodeStream(inputStream, null, options);
         } catch (Exception e) {
             bitmap = null;
-            e.printStackTrace();
+            logger.severe(e.getMessage());
         }
         srcImage = new ChartizateImageImpl(bitmap);
         this.outputFile = outputFile;

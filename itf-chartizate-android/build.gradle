@@ -58,7 +58,7 @@ def siteUrl = 'https://github.com/JEsperancinhaOrg/itf-chartizate-android'
 def gitUrl = 'scm:git:https://github.com/JEsperancinhaOrg/itf-chartizate-android.git'
 
 group = "org.jesperancinha.itf"
-version = "6.0.0"
+version = "6.0.1-SNAPSHOT"
 
 
 install {
@@ -69,8 +69,8 @@ install {
                 packaging 'aar'
 
                 name 'Chatizate Android Implementation'
-                description = 'Chatizate library to be used in Android Applications'
-                url 'https://github.com/jesperancinha/itf-chartizate/tree/master/itf-chartizate-android'
+                description 'Chartizate library to be used in Android Applications'
+                url 'https://github.com/JEsperancinhaOrg/itf-chartizate-android'
 
                 licenses {
                     license {
