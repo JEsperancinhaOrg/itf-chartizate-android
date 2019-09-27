@@ -6,9 +6,7 @@ import android.graphics.Color;
 import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
-
-import androidx.test.runner.AndroidJUnit4;
-
+import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.jesperancinha.chartizate.objects.ChartizateCharacterImg;
 import org.jesperancinha.chartizate.objects.ChartizateCharacterImgImpl;
 import org.junit.Before;
