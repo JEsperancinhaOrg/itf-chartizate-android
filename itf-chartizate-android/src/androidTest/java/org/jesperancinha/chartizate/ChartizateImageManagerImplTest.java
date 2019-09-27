@@ -4,9 +4,9 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.graphics.Typeface;
-import android.graphics.drawable.BitmapDrawable;
-import android.graphics.drawable.Drawable;
+
 import androidx.test.ext.junit.runners.AndroidJUnit4;
+
 import org.jesperancinha.chartizate.objects.ChartizateCharacterImg;
 import org.jesperancinha.chartizate.objects.ChartizateCharacterImgImpl;
 import org.junit.Before;
@@ -15,8 +15,6 @@ import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
 import org.junit.runner.RunWith;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -39,20 +37,22 @@ public class ChartizateImageManagerImplTest {
     }
 
     @Test
-    public void testgetImageAverageColorBlackGreen() {
-        final InputStream io = getByteArrayInputStreamFromResource(R.raw.chartizateblackgreen);
+    public void testgetImageAverageColorBlackGreen() throws IOException {
+        Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream = ctx.getResources().getAssets().open("chartizateblackgreen.png");
 
-        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(io, targetFile.getAbsolutePath());
+        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(imageFullStream, targetFile.getAbsolutePath());
 
         final Integer imageAverageInteger = imageManager.getImageAverageColor();
         assertThat(imageAverageInteger).isEqualTo(-416707840);
     }
 
     @Test
-    public void testgetImageAverageColorCyanBlack() {
-        final InputStream io = getByteArrayInputStreamFromResource(R.raw.chartizatecyanblack);
+    public void testgetImageAverageColorCyanBlack() throws IOException {
+        Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream = ctx.getResources().getAssets().open("chartizatecyanblack.png");
 
-        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(io, targetFile.getAbsolutePath());
+        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(imageFullStream, targetFile.getAbsolutePath());
 
         final Integer imageAverageInteger = imageManager.getImageAverageColor();
 
@@ -60,10 +60,11 @@ public class ChartizateImageManagerImplTest {
     }
 
     @Test
-    public void testGetPartAverageIntegerCyanBlack00() {
-        final InputStream io = getByteArrayInputStreamFromResource(R.raw.chartizatecyanblack);
+    public void testGetPartAverageIntegerCyanBlack00() throws IOException {
+        Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream = ctx.getResources().getAssets().open("chartizatecyanblack.png");
 
-        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(io, targetFile.getAbsolutePath());
+        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(imageFullStream, targetFile.getAbsolutePath());
 
         final Integer partAverageInteger = imageManager.getPartAverageColor(IntStream.range(0, 10), IntStream.range(0, 10));
 
@@ -71,10 +72,11 @@ public class ChartizateImageManagerImplTest {
     }
 
     @Test
-    public void testGetPartAverageIntegerCyanBlack10() {
-        final InputStream io = getByteArrayInputStreamFromResource(R.raw.chartizatecyanblack);
+    public void testGetPartAverageIntegerCyanBlack10() throws IOException {
+        Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream = ctx.getResources().getAssets().open("chartizatecyanblack.png");
 
-        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(io, targetFile.getAbsolutePath());
+        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(imageFullStream, targetFile.getAbsolutePath());
 
         final Integer partAverageInteger = imageManager.getPartAverageColor(IntStream.range(10, 19), IntStream.range(0, 10));
 
@@ -82,9 +84,10 @@ public class ChartizateImageManagerImplTest {
     }
 
     @Test
-    public void testSaveImage() {
-        final InputStream io = getByteArrayInputStreamFromResource(R.raw.chartizatecyanblack);
-        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(io, targetFile.getAbsolutePath());
+    public void testSaveImage() throws IOException {
+        Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream = ctx.getResources().getAssets().open("chartizatecyanblack.png");
+        final ChartizateImageManager<Integer, Typeface, Bitmap> imageManager = new ChartizateImageManagerImpl(imageFullStream, targetFile.getAbsolutePath());
         final ChartizateCharacterImg<Integer>[][] chartizateCharacterImgs = new ChartizateCharacterImg[2][];
         chartizateCharacterImgs[0] = new ChartizateCharacterImg[]{
                 new ChartizateCharacterImgImpl<>(Color.GREEN, Color.RED, 10, 'A'),
@@ -102,14 +105,4 @@ public class ChartizateImageManagerImplTest {
         });
     }
 
-    private ByteArrayInputStream getByteArrayInputStreamFromResource(int resource) {
-        final Context appContext = androidx.test.InstrumentationRegistry.getTargetContext();
-        final Drawable drawable = appContext.getDrawable(resource);
-        assertThat(drawable).isNotNull();
-        final Bitmap bitmap = ((BitmapDrawable) drawable).getBitmap();
-        final ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        bitmap.compress(Bitmap.CompressFormat.PNG, 0, bos);
-        final byte[] bitmapdata = bos.toByteArray();
-        return new ByteArrayInputStream(bitmapdata);
-    }
 }

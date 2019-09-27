@@ -7,6 +7,7 @@ import android.graphics.Typeface;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 
+import androidx.test.InstrumentationRegistry;
 import androidx.test.ext.junit.runners.AndroidJUnit4;
 import org.junit.Before;
 import org.junit.Rule;
@@ -49,7 +50,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageStreamCustomColor() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.chartizatecyanblack);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("chartizatecyanblack.png");
         assertThat(imageFullStream).isNotNull();
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
                 .backgroundColor(15280682)
@@ -70,7 +72,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageStreamCyanBlack() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.chartizatecyanblack);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("chartizatecyanblack.png");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
@@ -92,7 +95,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageCyanBlack() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.chartizatecyanblack);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("chartizatecyanblack.png");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
@@ -114,7 +118,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageLatinRealExample2() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.realexample2);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("realexample2.jpg");
 
         assertThat(imageFullStream).isNotNull();
 
@@ -137,7 +142,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageArabicRealExample2() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.realexample2);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("realexample2.jpg");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
@@ -159,7 +165,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageHebrewRealExample2() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.realexample2);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("realexample2.jpg");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
@@ -181,7 +188,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageSyriacRealExample2() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.realexample2);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("realexample2.jpg");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
@@ -203,7 +211,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageSamaritanRealExample2() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.realexample2);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("realexample2.jpg");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
@@ -225,7 +234,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageMandaicRealExample2() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.realexample2);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("realexample2.jpg");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
@@ -247,7 +257,8 @@ public class ChartizateManagerImplTest {
 
     @Test
     public void testGenerateConvertedImageThaanaRealExample2() throws Exception {
-        final InputStream imageFullStream = getByteArrayInputStreamFromResource(R.raw.realexample2);
+        final Context ctx = androidx.test.core.app.ApplicationProvider.getApplicationContext();
+        final InputStream imageFullStream =   ctx.getResources().getAssets().open("realexample2.jpg");
         assertThat(imageFullStream).isNotNull();
 
         final ChartizateManager<Integer, Typeface, Bitmap> manager = new ChartizateManagerBuilderImpl()
