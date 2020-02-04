@@ -9,6 +9,11 @@ android:
     - build-tools-29.0.0
     - android-29
 
+before_script:
+  - curl -s "https://get.sdkman.io" | bash
+  - source "$HOME/.sdkman/bin/sdkman-init.sh"
+  - sdk install gradle 6.1.1
+
 script:
   - touch local.properties
   - gradle clean build test
