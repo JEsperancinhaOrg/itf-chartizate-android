@@ -7,7 +7,7 @@
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/30fb9978d67c4abf92d9d426c7e60e55)](https://www.codacy.com/manual/jofisaes/itf-chartizate-android?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JEsperancinhaOrg/itf-chartizate-android&amp;utm_campaign=Badge_Grade)
 [![CircleCI](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android.svg?style=svg)](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android)
-[![Build Status](https://travis-ci.org/JEsperancinhaOrg/itf-chartizate-android.svg?branch=master)](https://travis-ci.org/JEsperancinhaOrg/itf-chartizate-android)
+[![Build Status](https://travis-ci.com/JEsperancinhaOrg/itf-chartizate-android.svg?branch=master)](https://travis-ci.com/JEsperancinhaOrg/itf-chartizate-android)
 [![codebeat badge](https://codebeat.co/badges/3bfe5689-c2d6-42f0-94ad-93bdbd479472)](https://codebeat.co/projects/github-com-jesperancinhaorg-itf-chartizate-android-master)
 [![BCH compliance](https://bettercodehub.com/edge/badge/JEsperancinhaOrg/itf-chartizate-android?branch=master)](https://bettercodehub.com/)
 [![Build status](https://ci.appveyor.com/api/projects/status/59hue3nnb3hqpn5i?svg=true)](https://ci.appveyor.com/project/jesperancinha/itf-chartizate-android)
