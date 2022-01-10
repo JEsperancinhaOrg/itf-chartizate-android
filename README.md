@@ -14,6 +14,8 @@
 
 ## Description
 
+This project is extremely old and so it need some refreshing. Major maintenance underway.
+
 ITF library for android
 
 Example:
