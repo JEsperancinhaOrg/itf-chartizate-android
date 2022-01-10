@@ -21,6 +21,12 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
+    - name: 'Use Android SDK'
+      description: 'Using Android SDK from a local file'
+      runs:
+        using: 'docker'
+        image: 'Dockerfile'
+
     - name: Download Android dependencies
       run: ./gradlew androidDependencies
 
