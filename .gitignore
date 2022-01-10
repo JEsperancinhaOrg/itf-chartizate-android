@@ -38,3 +38,6 @@ proguard/
 .navigation/
 
 .externalNativeBuild
+
+# Build
+*.jar
