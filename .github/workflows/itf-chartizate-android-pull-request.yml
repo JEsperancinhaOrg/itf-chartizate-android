@@ -21,8 +21,11 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
 
-    - name: Gradle Wrapper
-      run: ./gradlew wrapper
+    - name: Download Android dependencies
+      run: ./gradlew androidDependencies
+
+    - name: Gradle Lint Test
+      run: ./gradlew lint test
 #
 #     - name: Build with Gradle
 #       run: ./gradlew build
