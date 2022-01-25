@@ -13,6 +13,7 @@
 [![codebeat badge](https://codebeat.co/badges/3bfe5689-c2d6-42f0-94ad-93bdbd479472)](https://codebeat.co/projects/github-com-jesperancinhaorg-itf-chartizate-android-master)
 [![BCH compliance](https://bettercodehub.com/edge/badge/JEsperancinhaOrg/itf-chartizate-android?branch=master)](https://bettercodehub.com/)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/023d8e96dd29487fa44bcfd03685221c)](https://www.codacy.com/gh/JEsperancinhaOrg/itf-chartizate-android/dashboard?utm_source=github.com&utm_medium=referral&utm_content=JEsperancinhaOrg/itf-chartizate-android&utm_campaign=Badge_Coverage)
 [![Coverage Status](https://coveralls.io/repos/github/JEsperancinhaOrg/itf-chartizate-android/badge.svg?branch=master)](https://coveralls.io/github/JEsperancinhaOrg/itf-chartizate-android?branch=master)
 [![codecov](https://codecov.io/gh/JEsperancinhaOrg/itf-chartizate-android/branch/master/graph/badge.svg?token=k04uju1JEa)](https://codecov.io/gh/JEsperancinhaOrg/itf-chartizate-android)
 
