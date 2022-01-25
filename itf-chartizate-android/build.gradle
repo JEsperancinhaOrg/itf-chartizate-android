@@ -1,6 +1,3 @@
-plugins {
-    id( "org.jesperancinha.plugins.omni") version "0.0.2"
-}
 apply plugin: 'com.android.library'
 apply plugin: 'jacoco'
 

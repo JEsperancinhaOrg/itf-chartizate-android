@@ -9,9 +9,17 @@ buildscript {
         classpath 'com.android.tools.build:gradle:7.0.4'
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
+        classpath('com.google.guava:guava'){
+            version {
+                strictly '28.1-jre'
+            }
+        }
     }
 }
 
+plugins{
+    id( "org.jesperancinha.plugins.omni") version "0.0.2"
+}
 
 allprojects {
     version = '6.0.1'
