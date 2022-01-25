@@ -84,11 +84,6 @@ task javadoc(type: Javadoc) {
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
 }
 
-afterEvaluate {
-    javadoc.classpath += files(android.libraryVariants.collect { variant ->
-        variant.javaCompileProvider.get().classpath.files
-    })
-}
 task javadocJar(type: Jar, dependsOn: javadoc) {
     archiveClassifier.set("javadoc")
     from javadoc.destinationDir
@@ -101,19 +96,28 @@ artifacts {
 Properties properties = new Properties()
 properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
+jacoco {
+    toolVersion = "0.8.7"
+    reportsDir file("$buildDir/jacoco")
+}
+
+tasks.withType(Test) {
+    reports {
+        html.enabled false
+    }
+    useJUnitPlatform()
+    finalizedBy(jacocoTestReport)
+}
 
 task jacocoTestReport(type: JacocoReport, dependsOn: tasks.withType(Test)) {
     reports {
         xml.required = true
-        csv.required = true
-
+        csv.required = false
+        html.required = false
     }
 }
 
-tasks.withType(Test) {
-    useJUnitPlatform()
-    finalizedBy(jacocoTestReport)
-}
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])

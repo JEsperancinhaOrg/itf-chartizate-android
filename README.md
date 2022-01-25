@@ -65,6 +65,14 @@ gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg
 ```text
 ./gradlew bintrayUpload
 ```
+
+## [Jacoco](https://www.jacoco.org/jacoco/)
+
+```shell
+wget https://search.maven.org/remotecontent\?filepath\=org/jacoco/jacoco/0.8.7/jacoco-0.8.7.zip
+unzip remotecontent\?filepath=org%2Fjacoco%2Fjacoco%2F0.8.7%2Fjacoco-0.8.7.zip
+```
+
 ## gradle.properties
 
 ```text

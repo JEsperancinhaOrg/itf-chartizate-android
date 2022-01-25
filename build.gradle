@@ -12,6 +12,10 @@ buildscript {
     }
 }
 
+plugins {
+    id( "org.jesperancinha.plugins.omni") version "0.0.1"
+}
+
 allprojects {
     version = '6.0.1'
     repositories {

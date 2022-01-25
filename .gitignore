@@ -6,6 +6,8 @@
 .DS_Store
 /build
 /captures
+*.jar
+!libs/jacococli.jar
 
 # Built application files
 *.apk
