@@ -34,7 +34,8 @@ jobs:
       run: ./gradlew androidDependencies
 
     - name: Create reports
-      run: 	./gradlew clean build test jacocoTestReport -i &&
+      run: 	gradle wrapper --gradle-version 7.3.3 &&
+            ./gradlew clean build test jacocoTestReport -i &&
            	java -jar libs/jacococli.jar report itf-chartizate-android/build/jacoco/testReleaseUnitTest.exec --classfiles itf-chartizate-android/build/.transforms/*/transformed/out/jars/classes.jar --xml itf-chartizate-android/build/jacoco/jacocoRelease.xml
 
     - name: Send Reports
