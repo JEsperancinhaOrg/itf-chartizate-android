@@ -27,8 +27,5 @@ jobs:
     - name: Download Android dependencies
       run: ./gradlew androidDependencies
 
-    - name: Gradle Lint Test
-      run: ./gradlew lint test
-
     - name: Build with Gradle
       run: ./gradlew build
