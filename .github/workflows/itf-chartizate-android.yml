@@ -33,9 +33,12 @@ jobs:
     - name: Download Android dependencies
       run: ./gradlew androidDependencies
 
+    - name: Gradle Lint Test
+      run: ./gradlew lint test
+
     - name: Create reports
       run: 	gradle wrapper --gradle-version 7.3.3 &&
-            ./gradlew clean build test jacocoTestReport -i &&
+            ./gradlew clean build test jacocoTestReport &&
            	java -jar libs/jacococli.jar report itf-chartizate-android/build/jacoco/testReleaseUnitTest.exec --classfiles itf-chartizate-android/build/.transforms/*/transformed/out/jars/classes.jar --xml itf-chartizate-android/build/jacoco/jacocoRelease.xml
 
     - name: Send Reports

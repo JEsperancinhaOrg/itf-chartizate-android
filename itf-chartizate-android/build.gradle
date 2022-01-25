@@ -1,3 +1,6 @@
+plugins {
+    id( "org.jesperancinha.plugins.omni") version "0.0.1"
+}
 apply plugin: 'com.android.library'
 apply plugin: 'jacoco'
 
@@ -82,6 +85,12 @@ task javadoc(type: Javadoc) {
     dependsOn('generateDebugRFile')
     source = android.sourceSets.main.java.srcDirs
     classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+afterEvaluate {
+    javadoc.classpath += files(android.libraryVariants.collect { variant ->
+        variant.javaCompileProvider.get().classpath.files
+    })
 }
 
 task javadocJar(type: Jar, dependsOn: javadoc) {
