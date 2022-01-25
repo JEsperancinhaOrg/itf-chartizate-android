@@ -29,6 +29,6 @@ jobs:
 
     - name: Gradle Lint Test
       run: ./gradlew lint test
-#
-#     - name: Build with Gradle
-#       run: ./gradlew build
+
+    - name: Build with Gradle
+      run: ./gradlew build
