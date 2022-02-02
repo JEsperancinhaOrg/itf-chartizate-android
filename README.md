@@ -49,7 +49,6 @@ implementation 'org.jesperancinha.itf:itf-chartizate-android:6.0.1'
 
 ## Buid
 
-
 ```shell
 gradle wrapper --gradle-version 7.3.3
 ```
