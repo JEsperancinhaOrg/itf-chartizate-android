@@ -1,15 +1,19 @@
-# ITF chartizate android
+# itf-chartizate-android
 
+[![Twitter URL](https://img.shields.io/twitter/url?logoColor=blue&style=social&url=https%3A%2F%2Fimg.shields.io%2Ftwitter%2Furl%3Fstyle%3Dsocial)](https://twitter.com/intent/tweet?text=%20Checkout%20this%20%40github%20repo%20by%20%40joaofse%20%F0%9F%91%A8%F0%9F%8F%BD%E2%80%8D%F0%9F%92%BB%3A%20https%3A//github.com/JEsperancinhaOrg/itf-chartizate-android)
 [![Generic badge](https://img.shields.io/static/v1.svg?label=GitHub&message=itf-chartizate-android🧿&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)
+
+[![GitHub License](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg?style=flat)](https://www.apache.org/licenses/LICENSE-2.0)
+
 [![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/JEsperancinhaOrg/itf-chartizate-android)](https://github.com/JEsperancinhaOrg/itf-chartizate-android/releases)
 [![Maven Central](https://img.shields.io/maven-central/v/org.jesperancinha.itf/itf-chartizate-android)](https://mvnrepository.com/artifact/org.jesperancinha.itf/itf-chartizate-android)
 [![Sonatype Nexus](https://img.shields.io/nexus/r/https/oss.sonatype.org/org.jesperancinha.itf/itf-chartizate-android.svg)](https://search.maven.org/artifact/org.jesperancinha.itf/itf-chartizate-android)
 
+[![Status badge](https://img.shields.io/static/v1.svg?label=Status&message=Under%20Construction%20🚧&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)
 
 [![CircleCI](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android.svg?style=svg)](https://circleci.com/gh/JEsperancinhaOrg/itf-chartizate-android)
 [![Build status](https://ci.appveyor.com/api/projects/status/59hue3nnb3hqpn5i?svg=true)](https://ci.appveyor.com/project/jesperancinha/itf-chartizate-android)
 [![itf-chartizate-android](https://github.com/JEsperancinhaOrg/itf-chartizate-android/actions/workflows/itf-chartizate-android.yml/badge.svg)](https://github.com/JEsperancinhaOrg/itf-chartizate-android/actions/workflows/itf-chartizate-android.yml)
-[![Status badge](https://img.shields.io/static/v1.svg?label=Status&message=Under%20Construction%20🚧&color=informational)](https://github.com/JEsperancinhaOrg/itf-chartizate-android)
 
 [![Codacy Badge](https://app.codacy.com/project/badge/Grade/023d8e96dd29487fa44bcfd03685221c)](https://www.codacy.com/gh/JEsperancinhaOrg/itf-chartizate-android/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=JEsperancinhaOrg/itf-chartizate-android&amp;utm_campaign=Badge_Grade)
 [![codebeat badge](https://codebeat.co/badges/3bfe5689-c2d6-42f0-94ad-93bdbd479472)](https://codebeat.co/projects/github-com-jesperancinhaorg-itf-chartizate-android-master)
@@ -18,6 +22,10 @@
 [![Codacy Badge](https://app.codacy.com/project/badge/Coverage/023d8e96dd29487fa44bcfd03685221c)](https://www.codacy.com/gh/JEsperancinhaOrg/itf-chartizate-android/dashboard?utm_source=github.com&utm_medium=referral&utm_content=JEsperancinhaOrg/itf-chartizate-android&utm_campaign=Badge_Coverage)
 [![Coverage Status](https://coveralls.io/repos/github/JEsperancinhaOrg/itf-chartizate-android/badge.svg?branch=master)](https://coveralls.io/github/JEsperancinhaOrg/itf-chartizate-android?branch=master)
 [![codecov](https://codecov.io/gh/JEsperancinhaOrg/itf-chartizate-android/branch/master/graph/badge.svg?token=k04uju1JEa)](https://codecov.io/gh/JEsperancinhaOrg/itf-chartizate-android)
+
+[![GitHub language count](https://img.shields.io/github/languages/count/jesperancinhaorg/itf-chartizate-android.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/top/jesperancinhaorg/itf-chartizate-android.svg)](#)
+[![GitHub top language](https://img.shields.io/github/languages/code-size/jesperancinhaorg/itf-chartizate-android.svg)](#)
 
 ## Description
 
