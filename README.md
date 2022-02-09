@@ -61,13 +61,13 @@ implementation 'org.jesperancinha.itf:itf-chartizate-android:6.0.1'
 gradle wrapper --gradle-version 7.3.3
 ```
 
-```text
+```shelll
 gradle wrapper
 
 ./gradlew assembleRelease
 ```
 
-```text
+```shell
 gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg
 
 ./gradlew assemble -x signArchives
@@ -75,7 +75,7 @@ gpg --keyring secring.gpg --export-secret-keys > ~/.gnupg/secring.gpg
 ./gradlew assemble -x signArchives uploadArchives
 ```
 
-```text
+```shell
 ./gradlew bintrayUpload
 ```
 
@@ -98,15 +98,13 @@ sonatypePassword=<password>
 
 ---
 
+## References
+
 ## Buy me a coffee
 
-I hope you enjoyed this repository. If you did please buy me a coffee which enables me to constantly improve and make new free content regularly for everyone. Thank you so much!
+I hope you enjoyed this repository. If you did, you can optionally please buy me a coffee, which supports me in constantly improve and make new free content regularly for everyone. Thank you so much!
 
-<a href="https://www.buymeacoffee.com/jesperancinha"><img height="50px" src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&emoji=&slug=jesperancinha&button_colour=046c46&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00"></a>
-
----
-
-## References
+[![Buy me a coffee](https://img.buymeacoffee.com/button-api/?text=Buy%20me%20a%20coffee&emoji=&slug=jesperancinha&button_colour=046c46&font_colour=ffffff&font_family=Cookie&outline_colour=ffffff&coffee_colour=FFDD00 "title")](https://www.buymeacoffee.com/jesperancinha)
 
 ## About me 👨🏽‍💻🚀🏳️‍🌈
 
