@@ -99,11 +99,6 @@ artifacts {
     archives sourcesJar
 }
 
-jacoco {
-    toolVersion = "0.8.7"
-    reportsDir file("$buildDir/jacoco")
-}
-
 tasks.withType(Test) {
     useJUnitPlatform()
     finalizedBy(jacocoTestReport)
