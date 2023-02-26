@@ -99,18 +99,12 @@ artifacts {
     archives sourcesJar
 }
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
 jacoco {
     toolVersion = "0.8.7"
     reportsDir file("$buildDir/jacoco")
 }
 
 tasks.withType(Test) {
-    reports {
-        html.enabled false
-    }
     useJUnitPlatform()
     finalizedBy(jacocoTestReport)
 }
