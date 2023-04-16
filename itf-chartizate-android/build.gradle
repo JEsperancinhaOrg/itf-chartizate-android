@@ -12,7 +12,7 @@ allprojects {
 
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '8.0.0'
+    gradleVersion = '8.0.2'
 }
 
 
@@ -74,47 +74,6 @@ def gitUrl = 'scm:git:https://github.com/JEsperancinhaOrg/itf-chartizate-android
 group = "org.jesperancinha.itf"
 version = "6.0.1"
 
-task sourcesJar(type: Jar) {
-    from android.sourceSets.main.java.srcDirs
-    archiveClassifier.set("sources")
-}
-
-task javadoc(type: Javadoc) {
-    dependsOn('generateDebugRFile')
-    source = android.sourceSets.main.java.srcDirs
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-}
-
-afterEvaluate {
-    javadoc.classpath += files(android.libraryVariants.collect { variant ->
-        variant.javaCompileProvider.get().classpath.files
-    })
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
-    archiveClassifier.set("javadoc")
-    from javadoc.destinationDir
-}
-artifacts {
-    archives javadocJar
-    archives sourcesJar
-}
-
-tasks.withType(Test) {
-    useJUnitPlatform()
-    finalizedBy(jacocoTestReport)
-}
-
-task jacocoTestReport(type: JacocoReport, dependsOn: tasks.withType(Test)) {
-    reports {
-        xml.required = true
-        csv.required = false
-        html.required = false
-    }
-}
-
-
-
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'androidx.appcompat:appcompat:1.6.1'
@@ -131,5 +90,55 @@ dependencies {
     androidTestImplementation 'androidx.test:runner:1.5.2'
     androidTestUtil 'androidx.test:orchestrator:1.4.2'
 }
+
+
+tasks.register('sourcesJar', Jar) {
+    from android.sourceSets.main.java.srcDirs
+    archiveClassifier.set("sources")
+}
+
+tasks.register('javadoc', Javadoc) {
+    dependsOn(':itf-chartizate-android:generateReleaseRFile')
+    mustRunAfter(':itf-chartizate-android:generateDebugRFile')
+    failOnError false
+    configurations.implementation.setCanBeResolved(true)
+    configurations.implementation.resolve()
+    classpath += configurations.implementation
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+    source = android.sourceSets.main.java.srcDirs
+}
+
+afterEvaluate {
+    javadoc.classpath += files(android.libraryVariants.collect { variant ->
+        variant.javaCompileProvider.get().classpath.files
+    })
+}
+
+tasks.register('javadocJar', Jar) {
+    dependsOn javadoc
+    archiveClassifier.set("javadoc")
+    from(tasks.javadoc.destinationDir)
+}
+
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+tasks.withType(Test).configureEach {
+    useJUnitPlatform()
+    finalizedBy(jacocoTestReport)
+}
+
+tasks.register('jacocoTestReport', JacocoReport) {
+    dependsOn tasks.withType(Test)
+    reports {
+        xml.required = true
+        csv.required = false
+        html.required = false
+    }
+}
+
+
 
 
