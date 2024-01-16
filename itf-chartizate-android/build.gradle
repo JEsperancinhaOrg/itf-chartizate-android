@@ -11,8 +11,8 @@ allprojects {
 }
 
 
-task wrapper(type: Wrapper) {
-    gradleVersion = '8.0.2'
+tasks.register('wrapper', Wrapper) {
+    gradleVersion = '8.5'
 }
 
 
@@ -104,15 +104,15 @@ tasks.register('javadoc', Javadoc) {
     configurations.implementation.setCanBeResolved(true)
     configurations.implementation.resolve()
     classpath += configurations.implementation
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+//    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
     source = android.sourceSets.main.java.srcDirs
 }
 
-afterEvaluate {
-    javadoc.classpath += files(android.libraryVariants.collect { variant ->
-        variant.javaCompileProvider.get().classpath.files
-    })
-}
+//afterEvaluate {
+//    javadoc.classpath += files(android.libraryVariants.collect { variant ->
+//        variant.javaCompileProvider.get().classpath.files
+//    })
+//}
 
 tasks.register('javadocJar', Jar) {
     dependsOn javadoc
