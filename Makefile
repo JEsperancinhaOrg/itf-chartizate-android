@@ -1,5 +1,5 @@
 SHELL := /bin/bash
-GRADLE_VERSION ?= 8.1.1
+GRADLE_VERSION ?= 8.7
 
 b: buildw
 buildw:
@@ -12,8 +12,6 @@ unpack-reports:
 	mkdir -p jacoco
 	java -jar lib/jacococli.jar report itf-chartizate-android/build/jacoco/testReleaseUnitTest.exec --classfiles itf-chartizate-android/build/.transforms/*/transformed/out/jars/classes.jar --xml jacoco/jacocoRelease.xml
 	java -jar lib/jacococli.jar report itf-chartizate-android/build/jacoco/testDebugUnitTest.exec --classfiles itf-chartizate-android/build/.transforms/*/transformed/out/jars/classes.jar --xml jacoco/jacocoDebug.xml
-upgrade:
-	gradle wrapper --gradle-version 8.0.1
 install-linux:
 	sudo apt install sdkmanager
 	sudo sdkmanager "build-tools;27.0.3"
@@ -27,7 +25,7 @@ lint:
 	./gradlew lint test
 local-pipeline: dependencies lint b
 upgrade:
-	gradle wrapper --gradle-version $(GRADLE_VERSION)
+	gradle wrapper --gradle-version $(GRADLE_VERSION) --validate-url
 upgrade-gradle:
 	sudo apt upgrade
 	sudo apt update
