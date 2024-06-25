@@ -65,7 +65,7 @@ dependencies {
     androidTestImplementation 'org.mockito:mockito-android:5.12.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestUtil 'androidx.test:orchestrator:1.4.2'
+    androidTestUtil 'androidx.test:orchestrator:1.5.0'
 }
 
 def siteUrl = 'https://github.com/JEsperancinhaOrg/itf-chartizate-android'
@@ -88,7 +88,7 @@ dependencies {
     androidTestImplementation 'org.mockito:mockito-android:5.12.0'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test:runner:1.5.2'
-    androidTestUtil 'androidx.test:orchestrator:1.4.2'
+    androidTestUtil 'androidx.test:orchestrator:1.5.0'
 }
 
 
