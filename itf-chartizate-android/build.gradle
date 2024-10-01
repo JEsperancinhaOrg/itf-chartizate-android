@@ -10,12 +10,6 @@ allprojects {
     }
 }
 
-
-tasks.register('wrapper', Wrapper) {
-    gradleVersion = '8.5'
-}
-
-
 android {
     namespace 'org.jesperancinha.chartizate'
 
