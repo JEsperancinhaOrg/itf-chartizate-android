@@ -52,3 +52,7 @@ deps-gradle-update:
 deps-plugins-update:
 	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/pluginUpdatesOne.sh | bash -s -- $(PARAMS)
 deps-quick-update: deps-gradle-update deps-plugins-update
+accept-prs:
+	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/acceptPR.sh | bash
+update-repo-prs:
+	curl -sL https://raw.githubusercontent.com/jesperancinha/project-signer/master/update-all-repo-prs.sh | bash
