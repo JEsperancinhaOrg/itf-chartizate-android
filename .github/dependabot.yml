@@ -6,6 +6,7 @@ updates:
       interval: "daily"
     groups:
       android:
-        - "*android*"
-        - "android*"
-        - "*android"
+        patterns:
+          - "*android*"
+          - "android*"
+          - "*android"
