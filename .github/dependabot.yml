@@ -4,3 +4,8 @@ updates:
     directory: "/"
     schedule:
       interval: "daily"
+    groups:
+      android:
+        - "*android*"
+        - "android*"
+        - "*android"
