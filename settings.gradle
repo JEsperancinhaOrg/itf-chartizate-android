@@ -7,6 +7,3 @@ pluginManagement {
 }
 
 include ':itf-chartizate-android'
-include 'test-project'
-include 'test-project:untitled'
-findProject(':test-project:untitled')?.name = 'untitled'
