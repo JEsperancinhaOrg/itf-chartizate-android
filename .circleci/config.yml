@@ -9,7 +9,7 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "itf-chartizate-android/build.gradle" }}
+          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "itf-chartizate-android/build.gradle.kts" }}
       - run:
           name: Setting properties
           command: touch local.properties
@@ -19,7 +19,7 @@ jobs:
       - save_cache:
           paths:
             - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "itf-chartizate-android/build.gradle" }}
+          key: jars-{{ checksum "build.gradle.kts" }}-{{ checksum  "itf-chartizate-android/build.gradle.kts" }}
       - run:
           name: Run Tests
           command: ./gradlew lint test
