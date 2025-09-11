@@ -1,4 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+plugins {
+    alias(libs.plugins.omni)
+}
+
 buildscript {
     repositories {
         mavenLocal()
@@ -6,23 +10,15 @@ buildscript {
         google()
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.9.0'
-        // NOTE: Do not place your application dependencies here; they belong
-        // in the individual module build.gradle files
-        classpath('com.google.guava:guava'){
+        classpath("com.google.guava:guava") {
             version {
-                strictly '28.1-jre'
+                strictly(libs.versions.guava.get())
             }
         }
     }
 }
-
-plugins{
-    id( "org.jesperancinha.plugins.omni") version "0.3.0"
-}
-
 allprojects {
-    version = '6.0.1'
+    version = "6.0.1"
     repositories {
         mavenLocal()
         mavenCentral()
