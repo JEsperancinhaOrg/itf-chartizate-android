@@ -1,0 +1,15 @@
+[versions]
+androidGradle = "8.12.1"
+guava = "28.1-jre"
+omniPlugin = "0.3.0"
+compileSdk = "33"
+minSdk = "29"
+targetSdk = "33"
+
+[libraries]
+chartizate = { group = "org.jesperancinha.itf", name= "itf-chartizate-java", version = "5.0.0" }
+
+[plugins]
+androidLibrary = { id = "com.android.library", version.ref = "androidGradle" }
+jacoco = { id = "jacoco" }
+omni = { id = "org.jesperancinha.plugins.omni", version.ref = "omniPlugin" }
