@@ -8,6 +8,10 @@ targetSdk = "33"
 
 [libraries]
 chartizate = { group = "org.jesperancinha.itf", name= "itf-chartizate-java", version = "5.0.0" }
+junitJupiterApi = { group = "org.junit.jupiter", name = "junit-jupiter-api", version = "5.10.2" }
+junitJupiterEngine = { group = "org.junit.jupiter", name = "junit-jupiter-engine", version = "5.10.2" }
+junitJupiterParams = { group = "org.junit.jupiter", name = "junit-jupiter-params", version = "5.10.2" }
+junitPlatformLauncher = { group = "org.junit.platform", name = "junit-platform-launcher", version = "1.10.2" }
 
 [plugins]
 androidLibrary = { id = "com.android.library", version.ref = "androidGradle" }
