@@ -1,5 +1,5 @@
 [versions]
-androidGradle = "8.13.0"
+androidGradle = "8.13.1"
 guava = "28.1-jre"
 omniPlugin = "0.4.5"
 compileSdk = "33"
