@@ -5,7 +5,7 @@ omniPlugin = "0.4.5"
 compileSdk = "33"
 minSdk = "29"
 targetSdk = "33"
-junitJupiter = "6.0.1"
+junitJupiter = "6.0.2"
 
 [libraries]
 chartizate = { group = "org.jesperancinha.itf", name= "itf-chartizate-java", version = "5.0.0" }
